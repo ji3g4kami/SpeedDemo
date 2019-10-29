@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mgr-tY-ppH">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pick a City-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="PickerViewController" id="BYZ-38-t0r" customClass="PickerViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kud-ub-Shn">
+                                <rect key="frame" x="161.5" y="424" width="91" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="測試在"/>
+                                <connections>
+                                    <segue destination="7Z6-0x-AuJ" kind="show" id="MvQ-fJ-EgK"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1GA-pY-bT6">
+                                <rect key="frame" x="0.0" y="148" width="414" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ys-ON-u2k">
+                                <rect key="frame" x="164" y="383.5" width="86" height="30"/>
+                                <state key="normal" title="Confirm City"/>
+                                <connections>
+                                    <action selector="confirmCityPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="62m-4V-hHs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Ys-ON-u2k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1gM-hA-rbf"/>
+                            <constraint firstItem="1GA-pY-bT6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="46V-CF-cuy"/>
+                            <constraint firstItem="kud-ub-Shn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5FK-eQ-FY1"/>
+                            <constraint firstItem="kud-ub-Shn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6bo-Ee-3Df"/>
+                            <constraint firstItem="1GA-pY-bT6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bwJ-m3-2cj"/>
+                            <constraint firstItem="1GA-pY-bT6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kEp-hc-Lnz"/>
+                            <constraint firstItem="6Ys-ON-u2k" firstAttribute="top" secondItem="1GA-pY-bT6" secondAttribute="bottom" constant="20" id="ryR-RL-4uC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Pick a City" id="CyX-V3-9g5"/>
+                    <connections>
+                        <outlet property="cityPicker" destination="1GA-pY-bT6" id="hFO-xb-syU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tgZ-pM-Ezi">
+            <objects>
+                <viewController id="7Z6-0x-AuJ" customClass="ViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sJh-PP-bmk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXs-Wf-crV">
+                                <rect key="frame" x="146" y="424" width="122" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="我深深的"/>
+                                <connections>
+                                    <segue destination="kur-uy-uCe" kind="show" id="yzT-XR-sf7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="mXs-Wf-crV" firstAttribute="centerX" secondItem="sJh-PP-bmk" secondAttribute="centerX" id="14W-JH-N8L"/>
+                            <constraint firstItem="mXs-Wf-crV" firstAttribute="centerY" secondItem="sJh-PP-bmk" secondAttribute="centerY" id="J2v-8Q-oFm"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fha-qR-Ffu"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JxH-dZ-BMF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgN-Gb-lib" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873.913043478261" y="137.94642857142856"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="0qn-bQ-qqs">
+            <objects>
+                <viewController storyboardIdentifier="WeatherViewController" id="kur-uy-uCe" customClass="WeatherViewController" customModule="Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pcS-o5-Mni">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OD-Pl-U8J">
+                                <rect key="frame" x="161.5" y="424" width="91" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="頁面裡"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5OD-Pl-U8J" firstAttribute="centerX" secondItem="pcS-o5-Mni" secondAttribute="centerX" id="AsN-hg-P7d"/>
+                            <constraint firstItem="5OD-Pl-U8J" firstAttribute="centerY" secondItem="pcS-o5-Mni" secondAttribute="centerY" id="BIB-gv-cbg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dax-2w-anN"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tZs-Hb-NaM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QKR-TY-E6A" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2691" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="g1w-eA-cDn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mgr-tY-ppH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="hit-wG-iEh">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="afh-hY-3vr"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gLM-88-T3j" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
