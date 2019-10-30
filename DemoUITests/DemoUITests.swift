@@ -26,10 +26,6 @@ class DemoUITests: XCTestCase {
     super.tearDown()
   }
   
-  func testPickerViewRespondsToDatasource() {
-    app.pickerWheels.element.adjust(toPickerWheelValue: "London")
-  }
-  
   func testClickToWeatherView() {
     app.buttons["測試在"].tap()
     app.buttons["我深深的"].tap()
@@ -41,12 +37,17 @@ class DemoUITests: XCTestCase {
     testClickToWeatherView()
   }
   
-  func testPickedCity_showsCorrespondCityInNavTitle() {
+  func testPickedCity_showsCorrespondCity_navTitleAndTempLabel() {
     app.pickerWheels.element.adjust(toPickerWheelValue: "Vancouver")
     app.buttons["Confirm City"].tap()
     app.buttons["測試在"].tap()
     app.buttons["我深深的"].tap()
     
     XCTAssertTrue(app.navigationBars["Vancouver's Weather"].exists)
+    let tempLabel = app.staticTexts["tempLabel"]
+    
+    let predicate = NSPredicate(format: "label ENDSWITH '°C'")
+    let exp = expectation(for: predicate, evaluatedWith: tempLabel, handler: nil)
+    wait(for: [exp], timeout: 2)
   }
 }

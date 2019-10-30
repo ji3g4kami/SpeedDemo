@@ -98,19 +98,41 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="頁面裡"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68m-Pr-lPn">
+                                <rect key="frame" x="165.5" y="160" width="83.5" height="45.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="tempLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxS-Uk-Dx9">
+                                <rect key="frame" x="164" y="225.5" width="86" height="20.5"/>
+                                <accessibility key="accessibilityConfiguration" identifier="descriptionLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="5OD-Pl-U8J" firstAttribute="centerX" secondItem="pcS-o5-Mni" secondAttribute="centerX" id="AsN-hg-P7d"/>
                             <constraint firstItem="5OD-Pl-U8J" firstAttribute="centerY" secondItem="pcS-o5-Mni" secondAttribute="centerY" id="BIB-gv-cbg"/>
+                            <constraint firstItem="68m-Pr-lPn" firstAttribute="centerX" secondItem="pcS-o5-Mni" secondAttribute="centerX" id="VZm-6f-dwU"/>
+                            <constraint firstItem="zxS-Uk-Dx9" firstAttribute="top" secondItem="68m-Pr-lPn" secondAttribute="bottom" constant="20" id="ZEs-yk-l7L"/>
+                            <constraint firstItem="68m-Pr-lPn" firstAttribute="top" secondItem="dax-2w-anN" secondAttribute="top" constant="20" id="g5L-S0-fq4"/>
+                            <constraint firstItem="zxS-Uk-Dx9" firstAttribute="centerX" secondItem="pcS-o5-Mni" secondAttribute="centerX" id="qxK-j0-D5q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dax-2w-anN"/>
                     </view>
                     <navigationItem key="navigationItem" id="tZs-Hb-NaM"/>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="zxS-Uk-Dx9" id="3FX-4K-1na"/>
+                        <outlet property="tempLabel" destination="68m-Pr-lPn" id="9Ng-h7-pBU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QKR-TY-E6A" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2691" y="138"/>
+            <point key="canvasLocation" x="2689.8550724637685" y="137.94642857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="g1w-eA-cDn">
